@@ -1,0 +1,80 @@
+@import url('https://fonts.cdnfonts.com/css/badaboom-bb');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sevillana&family=VT323&display=swap');
+* {
+  box-sizing: border-box;
+  font-family: 'BadaBoom BB', sans-serif;
+  font-size: 16px;
+  filter: contrast(110%);
+}
+body {
+  --white: #f5f5f5;
+  --black: #000000;
+  --background: var(--black);
+  --foreground: var(--white);
+  --z-header: 1000;
+  background: linear-gradient(to bottom right, #004d65, #b1dd8b);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+.top {
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+}
+.bottom {
+  font-size: 75px;
+  font-family: "Sevillana", cursive;
+}
+.grid-item {
+  border: 1px solid #000;
+  text-align: center;
+}
+.comic-textboxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+.textbox {
+  position: absolute;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 10px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-size: 5px 5px;
+  background-image: radial-gradient(circle, #666 1px, transparent 2px);
+  background: linear-gradient(to bottom right, #ff7a18, #af002d);
+  max-width: 250px;
+  opacity: 0.9;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.overlay {
+  background-color: transparent;
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0) 1px,
+    var(--background) 1px
+  );
+  background-size: 4px 4px;
+  backdrop-filter: brightness(100%) blur(3px);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+  z-index: var(--z-header);
+  height: 100%;
+  opacity: 0.15;
+}
